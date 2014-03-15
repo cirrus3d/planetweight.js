@@ -1,6 +1,8 @@
-body { background: #aaa; }
+body { background: #c33; font-family: Ubuntu; }
 #planet-form { padding: 5px; margin: 10px 0; }
+.logo { display: block; width: 300px; height: 100px; background: url(../img/myscience-logo.png) no-repeat; }
 .inputfield {
+	font-family: Ubuntu;
 	-moz-border-radius: 5px; 
 	-webkit-border-radius: 5px; 
 	background-color: #EAEAEA; 
@@ -23,6 +25,9 @@ body { background: #aaa; }
 	background: #eee;
 	padding: 5px;
 }
-h2 { font-size: 1.2em; margin: 5px; background: #ddd; padding: 5px; }
+h2 { font-size: 1.2em; margin: 5px; background: #fff; padding: 5px; }
 .planet { padding: 5px; font-weight: bold; float: left; }
 .planet-data { padding: 5px; }
+.info { font-size: 0.75em; color: white; padding: 10px 0; text-align: center; }
+.info a { color: white; }
+.info a:hover { color: black; }
