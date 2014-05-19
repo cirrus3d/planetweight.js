@@ -7,10 +7,7 @@ var multipliers = {
   neptune: 114,
   uranus: 91
 },
-  calculate,
   input,
-  weight,
-  planets,
   textContent,
   tmp;
 
@@ -37,8 +34,8 @@ function calculate(ev) {
   }
 
   if(/^([0-9]+(\.[0-9]+)?|Infinity)$/.test(input.value)) {
-    weight = parseFloat(input.value);
-    planets = Array.prototype.slice.call(document.getElementsByClassName('planet'));
+    var weight = parseFloat(input.value);
+    var planets = Array.prototype.slice.call(document.getElementsByClassName('planet'));
 
     for (var i = 0, len = planets.length; i < len; i++) {
       var planet = planets[i];

@@ -5,6 +5,7 @@ body { background: #c33; font-family: Ubuntu; }
 	font-family: Ubuntu;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+	border-radius: 5px;
 	background-color: #EAEAEA;
 	background: -moz-linear-gradient(top, #FFF, #EAEAEA);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #FFF), color-stop(1.0, #EAEAEA));
@@ -24,8 +25,10 @@ body { background: #c33; font-family: Ubuntu; }
 #planet-table {
 	background: #eee;
 	padding: 5px;
-  border-radius: 15px;
-  margin-bottom: 7px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	margin-bottom: 7px;
 }
 h2 { font-size: 1.2em; margin: 5px; background: #fff; padding: 5px; }
 .planet { padding: 5px; font-weight: bold;}
