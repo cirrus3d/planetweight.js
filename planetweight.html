@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>Calculate your weight on other planets</title>
-<meta charset="UTF-8">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script type="text/javascript" src="js/planetweight.js"></script>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="css/planetweight.css" type="text/css">
-</head>
-<body>
-<div class="logo"></div>
-<h2>What is your weight?</h2>
-<div id="planet-form">
-<input id="weight" type="number" name="weight" class="inputfield" />
-<input id="calculate" type="button" name="calc" value="Calculate" class="inputfield" />
-</div>
-<div id="planet-table">
-<h2>Your weight on other planets:</h2>
-<div class="planet mercury">Mercury</div><div class="planet-data">###</div>
-<div class="planet mars">Mars</div><div class="planet-data">###</div>
-<div class="planet venus">Venus</div><div class="planet-data">###</div>
-<div class="planet jupiter">Jupiter</div><div class="planet-data">###</div>
-<div class="planet saturn">Saturn</div><div class="planet-data">###</div>
-<div class="planet neptune">Neptune</div><div class="planet-data">###</div>
-<div class="planet uranus">Uranus</div><div class="planet-data">###</div>
-</div>
-<div class="info">Tool created by <a href="mailto:kyriakos.terzopoulos@gmail.com">Kyriakos Terzopoulos</a> and <a href="mailto:maxoura@gmail.com">Alexandra Maxoura</a></div>
-</body>
+  <head>
+    <title>Calculate your weight on other planets</title>
+    <meta charset="UTF-8">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,greek' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/planetweight.css" type="text/css">
+  </head>
+  <body>
+    <div class="logo"></div>
+    <h2>What is your weight?</h2>
+    <div id="planet-form">
+      <input id="weight" type="number" name="weight" class="inputfield" value="0"></input>
+      <input id="calculate" type="button" name="calc" value="Calculate" class="inputfield" />
+    </div>
+    <div id="planet-table">
+      <h2>Your weight on other planets:</h2>
+      <div class="planet mercury">Mercury: <span>0</span></div>
+      <div class="planet mars">Mars: <span >0</span></div>
+      <div class="planet venus">Venus: <span>0</span></div>
+      <div class="planet jupiter">Jupiter: <span>0</span></div>
+      <div class="planet saturn">Saturn: <span>0</span></div>
+      <div class="planet neptune">Neptune: <span>0</span></div>
+      <div class="planet uranus">Uranus: <span>0</span></div>
+    </div>
+    <div class="info">Tool created by <a href="mailto:kyriakos.terzopoulos@gmail.com">Kyriakos Terzopoulos</a> and <a href="mailto:maxoura@gmail.com">Alexandra Maxoura</a></div>
+  </body>
+  <script type="text/javascript" src="js/planetweight.js"></script>
 </html>
