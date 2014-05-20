@@ -1,11 +1,11 @@
 body { background: #c33; font-family: Ubuntu; }
 #planet-form { padding: 5px; margin: 10px 0; }
-.logo { display: block; width: 300px; height: 100px; background: url(../img/myscience-logo.png) no-repeat; }
+.logo { display: block; width: 300px; height: 100px; }
 .inputfield {
 	font-family: Ubuntu;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	background-color: #EAEAEA;
 	background: -moz-linear-gradient(top, #FFF, #EAEAEA);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #FFF), color-stop(1.0, #EAEAEA));
@@ -23,14 +23,17 @@ body { background: #c33; font-family: Ubuntu; }
 }
 
 #planet-table {
-	background: #eee;
+	/*background: #000;*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #000), color-stop(1.0, #222));
 	padding: 5px;
-	-webkit-border-radius: 15px;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	margin-bottom: 7px;
+	color: white;
+	font-size: 1.2rem;
 }
-h2 { font-size: 1.2em; margin: 5px; background: #fff; padding: 5px; }
+h2 { font-size: 1.2rem; color: white; margin: 5px; padding: 5px; }
 .planet { padding: 5px; font-weight: bold;}
 .planet span { padding: 5px; }
 .planet span:after { content: ' kg'; };
