@@ -1,20 +1,56 @@
-var Mercury = 38;
-var Mars = 38;
-var Venus = 91;
-var Jupiter = 253;
-var Saturn = 107;
-var Neptune = 114;
-var Uranus = 91;
+var multipliers = {
+  mercury: 38,
+  mars: 38,
+  venus: 91,
+  jupiter: 253,
+  saturn: 107,
+  neptune: 114,
+  uranus: 91
+},
+  input,
+  textContent,
+  tmp;
 
-$(document).ready(function(){
-	$('#calculate').click(function(){
-		theInput = $('#weight').val();
-		$('.mercury').next().html((theInput/100*Mercury).toFixed(2));
-		$('.mars').next().html((theInput/100*Mars).toFixed(2));
-		$('.venus').next().html((theInput/100*Venus).toFixed(2));
-		$('.jupiter').next().html((theInput/100*Jupiter).toFixed(2));
-		$('.saturn').next().html((theInput/100*Saturn).toFixed(2));
-		$('.neptune').next().html((theInput/100*Neptune).toFixed(2));
-		$('.uranus').next().html((theInput/100*Uranus).toFixed(2));
-	});
+tmp = document.createElement('div');
+// Use innerText on internet explorer
+textContent = tmp.textContent ? 'textContent' : 'innerText';
+tmp = null;
+
+input = document.getElementById('weight');
+if (null === input) {
+  throw new Error('Couldn\'t locate element with id: \'weight\'');
+}
+
+input.addEventListener('change', function() {
+  if(!/^([0-9]+(\.[0-9]+)?|Infinity)$/.test(this.value)) {
+    this.value = 0;
+  }
 });
+
+function calculate(ev) {
+  ev.preventDefault();
+  if (null === input) {
+    return;
+  }
+
+  if(/^([0-9]+(\.[0-9]+)?|Infinity)$/.test(input.value)) {
+    var weight = parseFloat(input.value);
+    var planets = Array.prototype.slice.call(document.getElementsByClassName('planet'));
+
+    for (var i = 0, len = planets.length; i < len; i++) {
+      var planet = planets[i];
+      var identifier = planet.className.split(' ')[1];
+      var extraTerrestrialWeight = weight / 100 * multipliers[identifier];
+      // Note: toFixed is supposed to be buggy on internet explorer
+      planet.getElementsByTagName('span')[0][textContent] = extraTerrestrialWeight.toFixed(2);
+    }
+
+  }
+
+}
+
+calculateBtn = document.getElementById('calculate');
+if (null === calculateBtn) {
+  throw new Error('Couldn\'t locate element with id: \'calculate\'');
+}
+calculateBtn.addEventListener('click', calculate);
